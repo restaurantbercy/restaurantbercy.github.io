@@ -1,0 +1,83 @@
+
+<div id="divtagdefaultwrapper" style="font-size: 12pt; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, sans-serif, &quot;EmojiFont&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols;" dir="ltr"><br><div style="color: rgb(0, 0, 0);"><div><div id="divtagdefaultwrapper" dir="ltr" style="font-size: 12pt; color: rgb(0, 0, 0); font-family: Calibri, Helvetica, sans-serif, &quot;EmojiFont&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, NotoColorEmoji, &quot;Segoe UI Symbol&quot;, &quot;Android Emoji&quot;, EmojiSymbols;"><div style="color:rgb(0,0,0)"><div>
+    <table style="border:1px solid #C0C0C0" width="600" cellspacing="0" cellpadding="0" border="0" align="center">
+    
+        <tbody>
+            <tr>
+                <td style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:20px; padding:10px 10px 10px 10px" bgcolor="#3F51B5">
+                Confirmation de réservation </td>
+            </tr>
+            <tr>
+                <td style="color:#3F51B5; font-family:Arial,sans-serif; font-size:20px; padding:5px 5px 5px 5px" bgcolor="#FFFFFF">
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td style="padding:10px 10px 10px 10px">
+                                <table style="border:1px solid #C0C0C0; border-collapse:collapse" width="100%" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr style="background-color:#C0C0C0">
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                Restaurant </td>
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                DIDEROT </td>
+                            </tr>
+                            <tr>
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                Date </td>
+                                <td id="date" style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                08/10/2021 </td>
+                            </tr>
+                            <tr style="background-color:#C0C0C0">
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                Heure </td>
+                                <td id="time" style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                12:30:00 </td>
+                            </tr>
+                            <tr>
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                Code </td>
+                                <td id="card" style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                767055 </td>
+                            </tr>
+                            <tr style="background-color:#C0C0C0">
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                Places </td>
+                                <td style="color:#303030; padding:10px 10px 10px 10px; font-family:Arial,sans-serif; font-size:20px">
+                                1 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    
+
+<script>
+
+    
+var today = new Date();
+    
+    var day = today.getDate();
+    if (day < 10){
+        day = "0" + day;
+    }
+    var date = day+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+    
+    
+    let getRoundedDateTime = (minutes, d=new Date()) => {
+        let ms = 1000 * 60 * minutes; // convert minutes to ms
+        let roundedDate = new Date(Math.round(d.getTime() / ms) * ms);
+        return roundedDate.getHours() + ":" + roundedDate.getMinutes() + ":00";
+    }
+
+    //random card number generated :
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    document.getElementById("date").innerHTML = date;
+    document.getElementById("time").innerHTML = getRoundedDateTime(10, new Date());
+    document.getElementById("card").innerHTML = randomIntFromInterval(501000, 910000);;
+</script>
