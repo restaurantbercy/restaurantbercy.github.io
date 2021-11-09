@@ -1,0 +1,11 @@
+select{
+    background-color:#C0C0C0;
+    color:#303030; 
+    padding:10px 10px 10px 10px; 
+    font-family:Arial,sans-serif; 
+    font-size:20px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
