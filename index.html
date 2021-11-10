@@ -87,9 +87,9 @@
             let roundedDate = new Date(Math.round(d.getTime() / ms) * ms);
             let min = roundedDate.getMinutes();
             if (min == 0){
-                minutes = "00"
+                min = "00"
             }
-            return roundedDate.getHours() + ":" + minutes + ":00";
+            return roundedDate.getHours() + ":" + min + ":00";
         }
 
         //random card number generated :
