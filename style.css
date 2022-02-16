@@ -11,6 +11,5 @@ select{
 }
 
 .container {
-    position: absolute;
-    top: 40%;
+    margin-top: 30%
 }
